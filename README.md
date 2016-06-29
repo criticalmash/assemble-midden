@@ -16,14 +16,21 @@ var midden = require('handlebars-midden');
 var app = assemble();
 
 // register midden as a helper
-app.helper('midden', midden);
+app.helper('midden', midden(true));
 ```
+Midden has one config variable: isActive. This allows you to deactivate it when generating pages for a production environment. When inactive, it just returns an empty string. It might be used like so...
+
+```js
+/* assuming var environment was set earlier */
+app.helper('midden', midden(environment==='development'));
+```
+
 For midden to work, you also need to include it's styles and client-side code. You can find those in `node_modules/midden/dist/[styles, js]`.
 
 Here's how you *might* add them to your `css` and `script` tasks.
 
 ### Stylesheets
-There are three stylesheets available: midden.scss; midden.css; midden.min.css. Here's how you might add midden.scss to a SASS task.
+There are three stylesheets available: `midden.scss`, `midden.css` and `midden.min.css`. Here's how you might add `midden.scss` to a SASS task.
 
 ```js
 /* using sass and autoprefixer gulp plugins */
@@ -49,7 +56,7 @@ Then in your `app.scss` file...
 ```
 
 ### Client-Side JavaScript
-If you're using browserify to process your Javascript, just require it in main JS file. 
+If you're using browserify to process your Javascript, just require it in your main JS file.
 
 ```js
 require('midden/dist/js/midden-client.js');

@@ -5,17 +5,14 @@
 var chai = require('chai');
 var expect = chai.expect;
 
-// code to be tested
-var midden = require('../');
-
 describe('Midden', function() {
     it('should exist', function() {
         expect(require('../')).to.be.defined;
     });
 
-    describe('Midden helper', function(){
+    describe('middenConfig', function(){
       // code to be tested
-      var midden = require('../');
+      var middenConfig = require('../');
 
       var rawData = {
         'property1': 'some value',
@@ -27,9 +24,24 @@ describe('Midden', function() {
       };
 
       it('should return a midden output', function(){
+        var midden = middenConfig(true);
         var actual = midden.call(testObj, 'property1');
         //console.log(actual);
         expect(actual).to.contain('some value', 'missing requested value');
+      });
+
+      it('should return an empty string when configured false', function(){
+        var midden = middenConfig(false);
+        var actual = midden.call(testObj, 'property1');
+        //console.log(actual);
+        expect(actual).to.have.length(0);
+      });
+
+      it('should return an empty string when configured is not set', function(){
+        var midden = middenConfig();
+        var actual = midden.call(testObj, 'property1');
+        //console.log(actual);
+        expect(actual).to.have.length(0);
       });
     });
 });
