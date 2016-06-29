@@ -1,0 +1,35 @@
+{
+  "name": "handlebars-midden",
+  "version": "0.3.0",
+  "description": "Handlebars Helper to create pretty/interactive data dumps using midden",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://criticalmash@github.com/criticalmash/handlebars-midden.git"
+  },
+  "keywords": [
+    "handlebars",
+    "helper",
+    "assemble",
+    "dump",
+    "debug",
+    "dpm",
+    "krumo"
+  ],
+  "author": "John O'Donnell <john@criticalmash.com> (http://criticalmash.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/criticalmash/handlebars-midden/issues"
+  },
+  "homepage": "https://github.com/criticalmash/handlebars-midden#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  },
+  "dependencies": {
+    "get-value": "^2.0.6",
+    "midden": "^0.2.0"
+  }
+}
