@@ -1,9 +1,10 @@
 # handlebars-midden
 Handlebars Helper to create pretty/interactive data dumps using [midden](https://github.com/criticalmash/midden).
 
+See the [midden docs](https://github.com/criticalmash/midden#readme) for a further explanation.
 
 ## Install
-```npm install handlebars-midden```
+```npm install handlebars-midden --save```
 
 ## Using with [Assemble.js](https://github.com/assemble/assemble)
 
@@ -67,10 +68,14 @@ On page load, it will look for midden elements to attach event handlers to.
 Wherever you need to inspect a context value just pass it to the helper.
 
 ```Handlebars
-{{midden "view.data.navigation"}}
+{{midden "view.data"}}
 ```
 Load that page from your destination directory and you should see something like this...
 ![Midden Output](./docs/midden-expand-1.gif)
+
+## Tips for Use
+- When passed large objects, midden can generate large amounts of HTML. If you're interested in just a small part of that object then specify it in your call to midden.
+- The midden client-side code uses methods not supported by IE versions 9 and earlier (which shouldn't be a problem in a development only environment). Just in case you're using an older IE you might have to install a shim like [classList](https://github.com/eligrey/classList.js/blob/master/classList.js).
 
 ## Customizing Styles
 The ```dist/styles/midden.scss``` file uses over-writable default values for colors, etc. See the file for a list of values. 
@@ -79,7 +84,7 @@ The ```dist/styles/midden.scss``` file uses over-writable default values for col
 ### v0.1.0
 Beta release
 
-## Contributing
+## Contributing and Issues
 Feel free to submit issues or pull requests for [midden-handlebars](https://github.com/criticalmash/handlebars-midden/issues) or [midden](https://github.com/criticalmash/midden/issues). Questions on use can also be submitted to the issue queue.
 
 There's a suite of unit tests. ```mocha test/*-spec.js```

@@ -11,6 +11,7 @@
     "url": "git+https://criticalmash@github.com/criticalmash/handlebars-midden.git"
   },
   "keywords": [
+    "midden",
     "handlebars",
     "helper",
     "assemble",
