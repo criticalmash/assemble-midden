@@ -1,14 +1,14 @@
 {
-  "name": "handlebars-midden",
+  "name": "assemble-midden",
   "version": "0.3.0",
-  "description": "Handlebars Helper to create pretty/interactive data dumps using midden",
+  "description": "Assemble Helper to create pretty/interactive data dumps using midden",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*-spec.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://criticalmash@github.com/criticalmash/handlebars-midden.git"
+    "url": "git+https://criticalmash@github.com/criticalmash/assemble-midden.git"
   },
   "keywords": [
     "midden",
@@ -23,9 +23,9 @@
   "author": "John O'Donnell <john@criticalmash.com> (http://criticalmash.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/criticalmash/handlebars-midden/issues"
+    "url": "https://github.com/criticalmash/assemble-midden/issues"
   },
-  "homepage": "https://github.com/criticalmash/handlebars-midden#readme",
+  "homepage": "https://github.com/criticalmash/assemble-midden#readme",
   "devDependencies": {
     "chai": "^3.5.0"
   },

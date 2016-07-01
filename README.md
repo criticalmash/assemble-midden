@@ -1,18 +1,21 @@
-# handlebars-midden
-Handlebars Helper to create pretty/interactive data dumps using [midden](https://github.com/criticalmash/midden).
+npm deprecate handlebars-midden@"< 0.3.0" "WARNING: This project has been renamed to assemble-midden. Install using assemble-midden instead."
+
+
+# assemble-midden
+Assemble Helper to create pretty/interactive data dumps using [midden](https://github.com/criticalmash/midden).
 
 See the [midden docs](https://github.com/criticalmash/midden#readme) for a further explanation.
 
 ## Install
-```npm install handlebars-midden --save```
+```npm install assemble-midden --save```
 
 ## Using with [Assemble.js](https://github.com/assemble/assemble)
 
-Require handlebars-midden into your `assemblefile.js` and register it as a helper. 
+Require assemble-midden into your `assemblefile.js` and register it as a helper. 
 
 ```js
 var assemble = require('assemble');
-var midden = require('handlebars-midden');
+var midden = require('assemble-midden');
 
 var app = assemble();
 
@@ -85,7 +88,7 @@ The ```dist/styles/midden.scss``` file uses over-writable default values for col
 Beta release
 
 ## Contributing and Issues
-Feel free to submit issues or pull requests for [midden-handlebars](https://github.com/criticalmash/handlebars-midden/issues) or [midden](https://github.com/criticalmash/midden/issues). Questions on use can also be submitted to the issue queue.
+Feel free to submit issues or pull requests for [assemble-midden](https://github.com/criticalmash/assemble-midden/issues) or [midden](https://github.com/criticalmash/midden/issues). Questions on use can also be submitted to the issue queue.
 
 There's a suite of unit tests. ```mocha test/*-spec.js```
 
