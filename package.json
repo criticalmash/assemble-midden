@@ -1,6 +1,6 @@
 {
   "name": "assemble-midden",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Assemble Helper to create pretty/interactive data dumps using midden",
   "main": "index.js",
   "scripts": {
