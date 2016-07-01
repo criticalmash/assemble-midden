@@ -1,4 +1,4 @@
-npm deprecate handlebars-midden@"< 0.3.0" "WARNING: This project has been renamed to assemble-midden. Install using assemble-midden instead."
+**Formally know as handlebars-midden**
 
 
 # assemble-midden
