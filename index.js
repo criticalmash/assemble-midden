@@ -12,7 +12,12 @@ var get = require('get-value');
  */
 function getCallingTemplate(page, prop){
   var relPath = page.context.view.path;
-  var content = page.context.view.orig.split(/\r?\n/);
+  /* newer versions of Assemble appear to store orig as buffer */
+  var orig = page.context.view.orig;
+  if(orig instanceof Buffer){
+    orig = orig.toString();
+  }
+  var content = orig.split(/\r?\n/);
   var helperName = page.helper.name;
   var likely = "{{" + helperName + " '" + prop + "'}}";
   var helperRe = new RegExp('{{' + helperName + ' \\s*[\'"]' + prop + '[\'"]\\s*}}');
@@ -33,8 +38,8 @@ function getCallingTemplate(page, prop){
  * contains a vinyl view, will search view to find the line the 
  * helper was called from and insert the path:line into the midden
  * footer
- * @param  {string} prop [name of the property to inspect]
- * @return {string}      [midden output]
+ * @param  {string} prop 'name of the property to inspect'
+ * @return {string}      'midden output'
  */
 var handlebarsMidden = function handlebarsMidden(prop){
   var pathLine = 3;
