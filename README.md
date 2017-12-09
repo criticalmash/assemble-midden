@@ -87,6 +87,9 @@ The ```dist/styles/midden.scss``` file uses over-writable default values for col
 ### v0.1.0
 Beta release
 
+### v0.4.1
+Fixed issue caused by newer Versions of Assemble.js storing some template properties as buffer.
+
 ## Contributing and Issues
 Feel free to submit issues or pull requests for [assemble-midden](https://github.com/criticalmash/assemble-midden/issues) or [midden](https://github.com/criticalmash/midden/issues). Questions on use can also be submitted to the issue queue.
 

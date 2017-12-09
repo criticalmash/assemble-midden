@@ -1,7 +1,7 @@
 {
   "name": "assemble-midden",
   "version": "0.4.1",
-  "description": "Assemble Helper to create pretty/interactive data dumps using midden",
+  "description": "Assemble Helper to create pretty/interactive data dumps using midden.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*-spec.js"
